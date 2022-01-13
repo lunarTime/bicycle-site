@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'Be Vietnam Pro', sans-serif;
-}
-
-a {
+@mixin aStyle {
     text-decoration: none;
 
     &:visited {
@@ -17,6 +12,25 @@ a {
         color: black;
         text-decoration: none;
     }
+
+    &:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+a {
+    @include aStyle;
 }
 
 .header {
