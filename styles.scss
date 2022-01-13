@@ -24,6 +24,12 @@
     }
 }
 
+@mixin bgSettings {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 body {
     margin: 0;
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -34,12 +40,10 @@ a {
 }
 
 .header {
+    @include bgSettings;
+    background-image: url('src/images/headerLogo.jpg');
     display: flex;
     justify-content: center;
-    background-image: url('src/images/headerLogo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     height: 65vh;
     width: 100%;
 
@@ -90,13 +94,11 @@ a {
     width: 100%;
 
     &__left {
+        @include bgSettings;
+        background-image: url('src/images/imageLeft_secondBlock.png');
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url('src/images/imageLeft_secondBlock.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 600px;
         width: 66.66%;
 
@@ -105,9 +107,7 @@ a {
 
             img {
                 height: 118px;
-                width: 113px;  
-
-                
+                width: 113px;
             }
         }
     }
@@ -131,10 +131,8 @@ a {
         }
 
         &_down {
+            @include bgSettings;
             background-image: url('src/images/imageRight_secondBlock.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             height: 200px;
         }
     }
@@ -153,13 +151,11 @@ a {
     width: 100%;
 
     &__left {
+        @include bgSettings;
+        background-image: url('src/images/imageRight_thirdBlock.png');
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url('src/images/imageRight_thirdBlock.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 600px;
         width: 66.66%;
 
@@ -192,10 +188,8 @@ a {
         }
 
         &_down {
+            @include bgSettings;
             background-image: url('src/images/imageLeft_thirdBlock.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             height: 200px;
         }
     }
@@ -213,10 +207,8 @@ a {
     width: 100%;
 
     &__left {
+        @include bgSettings;
         background-image: url('src/images/imageLeft_fourthBlock.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 200px;
         width: 33.33%;
         height: 600px;
@@ -255,10 +247,8 @@ a {
         }
 
         &_down {
+            @include bgSettings;
             background-image: url('src/images/imageDown_fourthBlock.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             height: 200px;
         }
     }
@@ -270,12 +260,10 @@ a {
     }
 
     &__right {
-        width: 33.33%;
+        @include bgSettings;
         background-image: url('src/images/imageRight_fourthBlock.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 600px;
+        height: 600px;
+        width: 33.33%;
     }
 }
 
@@ -319,28 +307,22 @@ a {
         }
 
         &_down {
-            height: 50%;
+            @include bgSettings;
             background-image: url('src/images/downImage_sixthBlock.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            height: 50%;
         }
     }
 
     &__upleft {
+        @include bgSettings;
         background-image: url('src/images/leftImage_sixthBlock_left.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 100%;
         width: 50%;
     }
 
     &__upright {
+        @include bgSettings;
         background-image: url('src/images/leftImage_sixthBlock_right.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 100%;
         width: 50%;
     }
@@ -350,19 +332,15 @@ a {
         display: flex;
 
         &_left {
+            @include bgSettings;
             background-image: url('src/images/centerImage_sixthBlock_left.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             height: 100%;
             width: 50%;
         }
 
         &_right {
+            @include bgSettings;
             background-image: url('src/images/centerImage_sixthBlock_rigth.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             height: 100%;
             width: 50%;
         }
@@ -372,10 +350,8 @@ a {
         width: 33.33%;
 
         &_up {
+            @include bgSettings;
             background-image: url('src/images/rightImage_sixthBlock_right.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
             height: 50%;
             width: 100%;
         }
@@ -388,19 +364,15 @@ a {
     }
 
     &__downleft {
+        @include bgSettings;
         background-image: url('src/images/imageLeft_sixthBlock_right.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 100%;
         width: 50%;
     }
 
     &__downright {
+        @include bgSettings;
         background-image: url('src/images/imageRight_sixthBlock_right.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         height: 100%;
         width: 50%;
     }
@@ -522,9 +494,7 @@ a {
         width: 33.33%;
 
         img {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @include bgSettings;
             height: 38px;
             width: 154px;
             margin-right: 36px;
@@ -533,9 +503,7 @@ a {
 
     &__image1 {
         img{
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @include bgSettings;
             height: 38px;
             width: 38px;
             margin-right: 15px;
@@ -544,9 +512,7 @@ a {
 
     &__image2 {
         img{
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @include bgSettings;
             height: 38px;
             width: 38px;
             margin-right: 15px;
@@ -555,9 +521,7 @@ a {
 
     &__image3 {
         img{
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @include bgSettings;
             height: 38px;
             width: 38px;
         }
