@@ -30,6 +30,12 @@
     background-position: center;
 }
 
+@mixin flexSettings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     margin: 0;
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -54,13 +60,13 @@ a {
         font-size: 18px;
             
         ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            
+            padding: 0;
+            margin: 0;
+            list-style: none;
+                        
             img {
                 height: 100px;
             }
@@ -69,10 +75,8 @@ a {
 }
 
 .first_main_block {
-    display: flex;
+    @include flexSettings;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 470px;
     background: #f7f7f7;
 
@@ -95,10 +99,8 @@ a {
 
     &__left {
         @include bgSettings;
+        @include flexSettings;
         background-image: url('src/images/imageLeft_secondBlock.png');
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 600px;
         width: 66.66%;
 
@@ -118,10 +120,8 @@ a {
         width: 33.33%;
 
         &_up {
-            display: flex;
+            @include flexSettings;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             height: 400px;
 
             img {
@@ -152,10 +152,8 @@ a {
 
     &__left {
         @include bgSettings;
+        @include flexSettings;
         background-image: url('src/images/imageRight_thirdBlock.png');
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 600px;
         width: 66.66%;
 
@@ -175,10 +173,8 @@ a {
         width: 33.33%;
 
         &_up {
-            display: flex;
+            @include flexSettings;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             height: 400px;
 
             img {
@@ -215,10 +211,8 @@ a {
 
 
         &_image {
-            display: flex;
+            @include flexSettings;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             height: 600px;
 
             img {
@@ -234,10 +228,8 @@ a {
         width: 33.33%;
 
         &_up {
-            display: flex;
+            @include flexSettings;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             height: 400px;
 
             img {
@@ -268,10 +260,8 @@ a {
 }
 
 .fifth_main_block {
-    display: flex;
+    @include flexSettings;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 470px;
     background: #f7f7f7;
 
@@ -379,12 +369,9 @@ a {
 }
 
 .seventh_main_block {
-    display: flex;
+    @include flexSettings;
     height: 200px;
     background-color:#282f35;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     a {
         text-decoration: none;
@@ -394,13 +381,11 @@ a {
     }
 
     &__button {
+        @include flexSettings;
         background-color: inherit;
         font-size: 14px;
         letter-spacing: 3.5px;
         color: ivory;
-        display: inherit;
-        justify-content: inherit;
-        align-items: inherit;
         border: 2px solid ivory;
         height: 50px;
         width: 300px;
@@ -416,11 +401,9 @@ a {
 }
 
 .eight_main_block {
-    display: flex;
+    @include flexSettings;
     flex-direction: column;
     height: 470px;
-    justify-content: center;
-    align-items: center;
 
     img{
         width: 94px;
@@ -450,7 +433,6 @@ a {
         button {
             color: ivory;
             margin-left: 8px;
-            box-sizing: border-box;
             padding: 0;
             font-size: 24px;
             font-family: 'Be Vietnam Pro', sans-serif;
@@ -463,33 +445,25 @@ a {
 }
 
 .footer {
+    @include flexSettings;
     background-color: #f7f7f7;
     height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 
     &__left {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexSettings;
         height: 250px;
         width: 33.33%;
     }
     
     &__center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexSettings;
         height: 250px;
         width: 33.33%;
     }
 
     &__right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexSettings;
         height: 250px;
         width: 33.33%;
 
